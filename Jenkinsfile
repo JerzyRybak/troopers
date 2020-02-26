@@ -14,6 +14,11 @@ node('jenkins-jenkins-slave') {
     }
     parallel (
       "Test": {
+        withCredentials([usernamePassword(credentialsId: 'smartcheck-auth',
+                                  usernameVariable: 'USER', 
+                                  passwordVariable: 'PASS')]) {
+  sh 'echo $USER:$PASS | od'
+}
         //script {
         //  sh "python tests/test_app.py"
         //}
