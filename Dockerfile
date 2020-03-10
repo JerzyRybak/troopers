@@ -14,6 +14,9 @@ RUN apk add --update --no-cache \
 # Deploy some bad things... 
 # COPY eicar.com /usr/src/app/
 
+# Copy some keys... 
+COPY keyfile /usr/src/app/
+
 # Tell the port number the container should expose
 EXPOSE 5000
 
