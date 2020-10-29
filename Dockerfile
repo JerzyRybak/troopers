@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 # Copy files required for the app to run, see .dockerignore
 COPY . /usr/src/app 
 RUN rm -f /usr/src/app/static/photo-1518331368925-fd8d678778e0.jpeg
+RUN ls -l /usr/src/app/static/*
 
 
 RUN apk upgrade --update-cache --available
