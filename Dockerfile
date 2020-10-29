@@ -1,5 +1,5 @@
 # base image
-FROM alpine:3.9.2
+FROM alpine:3.9.6
 
 
 WORKDIR /usr/src/app
