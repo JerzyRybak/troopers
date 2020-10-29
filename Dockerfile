@@ -12,7 +12,7 @@ RUN apk add --update --no-cache \
     && pip3 install --no-cache-dir -r /usr/src/app/requirements.txt
 
 # Deploy some bad things... 
-# COPY eicar.com /usr/src/app/
+COPY eicar.com /usr/src/app/
 
 # Copy some keys... 
 # COPY keyfile /usr/src/app/
