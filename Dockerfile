@@ -5,6 +5,7 @@ FROM alpine:3.9.2
 WORKDIR /usr/src/app
 # Copy files required for the app to run, see .dockerignore
 COPY . /usr/src/app 
+RUN rm -f /usr/src/app/static/photo-1518331368925-fd8d678778e0.jpeg
 
 
 RUN apk upgrade --update-cache --available
@@ -19,7 +20,7 @@ RUN apk add --update --no-cache \
 
 # Copy some keys... 
 # COPY keyfile /usr/src/app/
-RUN rm -f /usr/src/app/static/photo-1518331368925-fd8d678778e0.jpeg
+
 
 # Tell the port number the container should expose
 EXPOSE 5000
